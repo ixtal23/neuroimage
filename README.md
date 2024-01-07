@@ -1,6 +1,8 @@
 # NeuroImage
 
-This is an image generation tool that implements the generating of images by [Diffusers](https://github.com/huggingface/diffusers) and [Kandinsky 2.2](https://huggingface.co/docs/diffusers/api/pipelines/kandinsky_v22) solutions.
+This is an image generation tool that implements the generating of images by the following diffusion models
+- [Kandinsky 2.2](https://huggingface.co/kandinsky-community/kandinsky-2-2-prior)
+- [Kandinsky 3.0](https://huggingface.co/kandinsky-community/kandinsky-3)
 
 ## Usage
 
@@ -17,8 +19,9 @@ python main.py --output-file OUTPUT_FILE
                [--seed SEED]
                [--guidance-scale GUIDANCE_SCALE]
                [--inference-steps [1-100]]
-               [--height [16-1024]]
-               [--width [16-1024]]
+               [--height [64-1024]]
+               [--width [64-1024]]
+               [--kandinsky-version {2.2,3.0}]
                [-h]
 ```
 
@@ -31,14 +34,17 @@ python main.py --output-file OUTPUT_FILE
 --seed SEED                         seed
 --guidance-scale GUIDANCE_SCALE     guidance scale
 --inference-steps [1-100]           the nummber of inference steps
---height [16-1024]                  the height in pixels of the generated image
---width [16-1024]                   the width in pixels of the generated image
+--height [64-1024]                  the height in pixels of the generated image
+--width [64-1024]                   the width in pixels of the generated image
+--kandinsky-version {2.2,3.0}       the version of Kandinsky model
 -h, --help                          show this help message and exit
 ```
 
 ## Credits
 
 Thanks a lot all developers behind libraries used in this project:
-- [Diffusers](https://github.com/huggingface/diffusers) 
-- [Kandinsky 2.2](https://huggingface.co/docs/diffusers/api/pipelines/kandinsky_v22)
+- [Diffusers Community](https://huggingface.co/docs/diffusers/index)
+- [Diffusers GitHub](https://github.com/huggingface/diffusers) 
 - [Kandinsky Community](https://huggingface.co/kandinsky-community)
+- [Kandinsky 2.2 GitHub](https://github.com/ai-forever/Kandinsky-2)
+- [Kandinsky 3.0 GitHub](https://github.com/ai-forever/Kandinsky-3)
